@@ -28,7 +28,7 @@ body{
     background: linear-gradient(to right, rgb(2, 39, 70), #584a07);
     /* background:rgba(5, 5, 5, 0.5); */
     color: rgb(255, 255, 255);
-    z-index: 0;
+    z-index: -1;
 }
 
 #header{
@@ -38,7 +38,7 @@ body{
 .parallex{
     /* background-image: url(./img/hero.jpeg); */
     background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(13, 35, 49, 0.667) 100%),
-    url('./img/hero.jpeg') no-repeat;
+    url('/img/hero.jpg') no-repeat;
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -69,6 +69,7 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 0 0 auto;
+    
 }
 
 nav ul li{
@@ -202,6 +203,8 @@ nav ul li a:hover::after{
 .projects{
     padding: 30px 10%;
     text-align: center;
+    position: relative;
+    /* z-index: 0; */
 }
 
 .projects .container{
@@ -209,6 +212,7 @@ nav ul li a:hover::after{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    /* z-index: 0; */
 }
 
 .project-col{
@@ -221,14 +225,17 @@ nav ul li a:hover::after{
     border-radius: 30px;
     transition: 0.4s;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.395);
+    /* z-index: 1; */
 }
+
 .project-col:hover{
     background: rgba(255, 255, 255, 0.066);
     transition: 0.4s;
     box-shadow: 0px 0px 16px 15px rgba(0, 0, 0, 0.275);
     /* transform: translateY(-10px); */
     /* z-index: 0 !important; */
-}
+}  
+
 .project-title{
     font-size: 30px;
     margin-bottom: 10px;
@@ -246,6 +253,7 @@ nav ul li a:hover::after{
 .android-icon{
     width: 12%;
     margin-top: 10px;
+    margin-bottom: 25px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -267,24 +275,152 @@ nav ul li a:hover::after{
     background: rgba(0, 0, 0, 0.179);;
     color: var(--oragnge);
     transition: 0.4s;
-    transform: scale(1.1);
+    transform: scale(1.0);
 }
-.bc-ss1{
-    width: 40%;
+
+/* See More */
+.btn-seemore{
+    background: rgba(255, 255, 255, 0.116);
+    color: #ffffff;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.4s;
+    /* margin-left: 5%; */
+
+  }
+.btn-seemore:hover{
+    background: var(--oragnge);
+    color: #ffffff;
+  }
+  
+  #box{
+    width: 80%;
+    height: 85vh;
+    overflow: hidden;
+    background: rgba(48, 48, 48, 0.422);
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 10px black;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    padding: 10px;
+    text-align: right;
     display: none;
-}
-.bc-ss2{
-    width: 40%;
-    display: none;
-}
-.bc-ss3{
-    width: 40%;
-    display: none;
-}
-.bc-ss4{
-    width: 40%;
-    display: none;
-}
+  }
+  
+  #box span{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    display: block;
+    margin: 20px 0;
+  }
+  
+  #box h1{
+    color: rgb(255, 255, 255)
+  }
+
+  .slideshow-container .ss{
+    height: 60vh;
+    border-radius: 15px;
+  }
+
+  .close{
+    font-size: 18px;
+    color: white;
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    /* display: inline-block; */
+    /* text-align: right; */
+    /* right: 0; */
+    /* float: inline-end; */
+  }
+  .close:hover{
+    color: var(--oragnge);
+  }
+  
+  
+  /* box content */
+  * {box-sizing: border-box}
+  body {font-family: Verdana, sans-serif; margin:0}
+  .mySlides {display: none}
+  img {vertical-align: middle;}
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 20px 12px;
+    padding-bottom: 0;
+    position: relative;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    background-color: rgb(163, 163, 163);
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+  }
+  .dotset{
+      display: inline;
+  
+  }
+  ul{
+      display: flex;
+      justify-content:center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  li{
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  
+  .active {
+    background-color:var(--oragnge)
+  }
+  .dot:hover{
+    background-color: #ffffff;
+  }
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+  /* End of see more */
+
 
 .new-icon{
     padding: 20px;
@@ -322,43 +458,7 @@ nav ul li a:hover::after{
     padding-bottom: 10%;
 }
 
-/* The Modal (background) */
-.modal {
-    display: none;
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.323); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #5050506a;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid rgba(136, 136, 136, 0);
-    border-radius: 30px;
-    width: 80%; /* Could be more or less, depending on screen size */
-    cursor:default;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover {
-    color: var(--oragnge);
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.4s;
-  }
+ 
 
   /* ----------Contact---------- */
   .contact{
@@ -401,9 +501,10 @@ nav ul li a:hover::after{
     text-align: center;
   }
 
-  .contact-col1 .download{
+.download{
     background: rgba(255, 255, 255, 0.116);
     color: var(--oragnge);
+    cursor: pointer;
     padding: 20px;
     border-radius: 30px;
     text-decoration: none;
@@ -411,7 +512,7 @@ nav ul li a:hover::after{
     /* margin-left: 5%; */
 
   }
-  .contact-col1 .download:hover{
+.download:hover{
     background: var(--oragnge);
     color: #ffffff;
   }
@@ -506,7 +607,7 @@ nav .fa-solid{
         height: 100vh;
         /* background: rgba(11, 28, 39, 0.933); */
         background: linear-gradient(to right, rgb(1, 35, 62), #000000d2);
-        backdrop-filter: blur(10px);
+        /* backdrop-filter: blur(10px); */
         padding-top: 45px;
         transition: left 0.4s;
         z-index: 2;
