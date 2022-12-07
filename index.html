@@ -181,8 +181,7 @@
     
     <script>
     //Text Animation   
-        // function([string1, string2],target id,[color1,color2])    
-        consoleText(['Mobile Developer'], 'text');
+        consoleText(['Software Engineering Undergraduate'], 'text');
 
         function consoleText(words, id, colors) {
         if (colors === undefined) colors = ['#fff'];
@@ -209,13 +208,7 @@
                 letterCount += x;
                 waiting = false;
             }, 1000)
-            // } else if (letterCount === words[0].length + 1 && waiting === false) {
-            // waiting = true;
-            // window.setTimeout(function() {
-            //     x = -1;
-            //     letterCount += x;
-            //     waiting = false;
-            // }, 1000)
+            
             } else if (waiting === false) {
             target.innerHTML = words[0].substring(0, letterCount)
             letterCount += x;
@@ -247,14 +240,7 @@
             sidemenu.style.left = "-225px";  
         }
 
-        // document.querySelector('#sidemenu').addEventListener('wheel', preventScroll, {passive: false});
-
-        // function preventScroll(e){
-        //     e.preventDefault();
-        //     e.stopPropagation();
-
-        //     return false;
-        // }
+       
     </script>
 
 <!-- ---Contact form--- -->
