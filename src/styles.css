@@ -400,7 +400,7 @@ nav ul li a:hover::after{
   .active,.dot:hover {
     background-color:var(--oragnge)
   }
-  
+
   /* Fading animation */
   .fade {
     animation-name: fade;
@@ -560,6 +560,7 @@ nav ul li a:hover::after{
     background: rgba(0, 0, 0, 0.505);
     padding: 2%;
     width: 100%;
+    font-size: 16px;
   }
 
 
@@ -690,6 +691,14 @@ nav .fa-solid{
         text-align: center;
         padding: 0%;
     }
+    .copyright{
+        text-align: center;
+        background: rgba(0, 0, 0, 0.505);
+        padding: 2%;
+        width: 100%;
+        font-size: 12px;
+      }
+    
 
   }
 
