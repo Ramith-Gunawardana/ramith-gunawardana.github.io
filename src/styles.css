@@ -397,12 +397,10 @@ nav ul li a:hover::after{
       padding-right: 10px;
   }
   
-  .active {
+  .active,.dot:hover {
     background-color:var(--oragnge)
   }
-  .dot:hover{
-    background-color: #ffffff;
-  }
+  
   /* Fading animation */
   .fade {
     animation-name: fade;
@@ -692,6 +690,7 @@ nav .fa-solid{
         text-align: center;
         padding: 0%;
     }
+
   }
 
   #submitmsg{
@@ -700,4 +699,5 @@ nav .fa-solid{
     margin-bottom: 10px;
     padding-bottom: 10px;
     padding-bottom: 20px;
+    color: var(--oragnge);
   }
