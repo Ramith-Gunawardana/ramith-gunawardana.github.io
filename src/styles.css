@@ -588,7 +588,7 @@ nav ul li a:hover::after{
 .legal{
     text-align: center;
     background: rgba(0, 0, 0, 0.182);
-    padding: 2%;
+    padding: 15px;
     width: 100%;
 }
 .attr{
