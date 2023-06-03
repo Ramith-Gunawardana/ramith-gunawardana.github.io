@@ -1,3 +1,3 @@
 This is my personal website.
 
-[Checkout](https://ramith-gunawardana.github.io/)
+[Check it out](https://ramith-gunawardana.github.io/)
