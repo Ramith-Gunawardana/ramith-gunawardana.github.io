@@ -494,9 +494,21 @@ nav ul li a:hover::after{
     margin-bottom: 40px;
   }
 
-  .contact i:hover{
+  /* .contact i:hover{
     color: var(--oragnge);
     transform: scale(1.1);
+  } */
+  .insta :hover{
+    transform: scale(1.2);
+    color: #dd2a7b;
+  }
+  .linkedin :hover{
+    transform: scale(1.2);
+    color: #0e76a8;
+  }
+  .github :hover{
+    transform: scale(1.2);
+    color: #b46cc9;
   }
 
   .contact-col1{
