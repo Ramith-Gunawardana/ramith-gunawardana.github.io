@@ -265,9 +265,7 @@ nav ul li a:hover::after{
     transition: 0.4s;
     transform: scale(1.1);
 }
-.attr{
-    font-size: 8px;
-}
+
 .android-icon{
     width: 12%;
     margin-top: 10px;
@@ -587,6 +585,16 @@ nav ul li a:hover::after{
     border-radius: 10px;
   }
 
+.legal{
+    text-align: center;
+    background: rgba(0, 0, 0, 0.182);
+    padding: 2%;
+    width: 100%;
+}
+.attr{
+    font-size: 8px;
+    padding: 5px;
+}
   .copyright{
     text-align: center;
     background: rgba(0, 0, 0, 0.505);
