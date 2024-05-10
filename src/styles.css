@@ -294,6 +294,10 @@ nav ul li a:hover::after{
     transform: scale(1.0);
 }
 
+.person{
+    color: rgb(194, 194, 194);
+}
+
 /* See More */
 .btn-seemore{
     background: rgba(255, 255, 255, 0.116);
@@ -471,6 +475,8 @@ nav ul li a:hover::after{
     padding-top: 10%;
     padding-bottom: 10%;
 }
+
+
 
  
 
