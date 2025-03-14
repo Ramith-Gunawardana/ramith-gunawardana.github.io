@@ -25,14 +25,14 @@ html{
 }
 
 body{
-    background: linear-gradient(to right, rgb(2, 39, 70), #584a07);
+    background: linear-gradient(to right, rgb(2, 60, 107), #064255);
     /* background:rgba(5, 5, 5, 0.5); */
     color: rgb(255, 255, 255);
     z-index: -1;
 }
 
 #header{
-    height: 100vh;
+    height: 100dvh;
 }
 
 .parallex{
@@ -107,7 +107,6 @@ nav ul li a:hover::after{
     font-size: 20px;
     padding: 10px;
     padding-top: 15%;
-   
 }
 
 .header-text h1{
@@ -207,25 +206,42 @@ nav ul li a:hover::after{
     z-index: 0;
 }
 
+.project-heading{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.projects p{
+    font-size: 16px;
+    text-align: left;
+}
+
+
 .projects .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 20px;
     margin-top: 50px;
     z-index: 0;
+    
 }
 
 .project-col{
     background: rgba(0, 0, 0, 0.179);
     /* backdrop-filter: blur(10px); */
-    padding: 40px;
+    padding: 32px;
     font-size: 20px;
     font-weight: 200;
     color: rgb(194, 194, 194);
-    border-radius: 30px;
+    border-radius: 24px;
     transition: 0.4s;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.395);
     /* z-index: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-col:hover{
@@ -237,24 +253,21 @@ nav ul li a:hover::after{
 }  
 
 .project-title{
-    font-size: 30px;
+    font-size: 22px;
+    margin-left: 24px;
     margin-bottom: 10px;
+    text-align: left;
     color: var(--oragnge);
 }
 .basecal-icon{
     border-radius: 50%;
     width: 30%;
-    margin-bottom: 4%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 4%;
 }
 .tblmgt-icon{
+    border-radius: 20%;
     width: 30%;
-    margin-bottom: 4%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 4%;
 }
 .playicon{
     margin-top: 10px;
@@ -293,9 +306,47 @@ nav ul li a:hover::after{
     transition: 0.4s;
     transform: scale(1.0);
 }
+.project-col-comingsoon{
+    background: rgba(0, 0, 0, 0.179);
+    text-align: center;
+    /* backdrop-filter: blur(10px); */
+    padding: 40px;
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(194, 194, 194);
+    border-radius: 30px;
+    transition: 0.4s;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.395);
+}
+
+.project-col-comingsoon:hover{
+    background: rgba(255, 255, 255, 0.066);
+    transition: 0.4s;
+    /* box-shadow: 0px 0px 16px 15px rgba(0, 0, 0, 0.275); */
+    /* transform: translateY(-10px); */
+    /* transform: scale(1.1); */
+}
+.project-col-comingsoon:hover:after{
+    z-index: -1;
+}
 
 .person{
     color: rgb(194, 194, 194);
+}
+
+.visit-website{
+    background-color: #000000; 
+    color: white; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    border: solid 1px white; 
+    border-radius: 6px; 
+    cursor: pointer;
+}
+
+.visit-website:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
 }
 
 /* See More */
@@ -443,40 +494,6 @@ nav ul li a:hover::after{
 .new-icon{
     padding: 20px;
 }
-
-.project-col-comingsoon{
-    background: rgba(0, 0, 0, 0.179);
-    /* backdrop-filter: blur(10px); */
-    padding: 40px;
-    font-size: 20px;
-    font-weight: 200;
-    color: rgb(194, 194, 194);
-    border-radius: 30px;
-    transition: 0.4s;
-    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.395);
-}
-
-.project-col-comingsoon:hover{
-    background: rgba(255, 255, 255, 0.066);
-    transition: 0.4s;
-    /* box-shadow: 0px 0px 16px 15px rgba(0, 0, 0, 0.275); */
-    /* transform: translateY(-10px); */
-    /* transform: scale(1.1); */
-}
-.project-col-comingsoon:hover:after{
-    z-index: -1;
-}
-.project-col-comingsoon .content{
-    padding-top: 30%;
-    padding-bottom: 30%;
-}
-
-.project-col .content{
-    padding-top: 10%;
-    padding-bottom: 10%;
-}
-
-
 
  
 
@@ -714,16 +731,17 @@ nav .fa-solid{
     }
     
     .about-text{
-        text-align: center;
-        margin: 20px;
+        text-align: left;
+        margin: 40px;
     }
 
     .projects .container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 40px;
-        margin-top: 50px;
+        grid-gap: 20px;
+        margin-top: 30px;
         z-index: 0;
+        
     }
 
     .contact .row{
@@ -732,7 +750,8 @@ nav .fa-solid{
 
     .contact-col1, .contact-col2{
         margin: 0 0;
-        padding: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
         flex-basis: 100%;
         text-align: center;
     }
